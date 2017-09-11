@@ -2,12 +2,12 @@
 apiVersion: extensions/v2beta1beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: user
+  name: payment
   namespace: sock-shop
 spec:
   scaleRef:
     kind: Deployment
-    name: user
+    name: payment
     subresource: scale
   minReplicas: 1
   maxReplicas: 10
